@@ -1,0 +1,20 @@
+<h1>Refresh {{course.title}}</h1>
+<form action="/courses/edit" method="post">
+    <div class="input-field">
+        <input id="title" name="title" type="text" class="validate" required value="{{course.title}}">
+        <label for="title">Name course</label>
+        <span class="helper-text" data-error="input Name"></span>
+    </div>
+    <div class="input-field">
+        <input id="price" name="price" type="number" class="validate" required min="1" value="{{course.price}}">
+        <label for="price">Price course</label>
+        <span class="helper-text" data-error="price"></span>
+    </div>
+    <div class="input-field">
+        <input id="img" type="text" name="img" class="validate" required value="{{course.img}}">
+        <label for="img">url picture</label>
+        <span class="helper-text" data-error="input URL"></span>
+    </div>
+    <input type="hidden" name="id" value="{{course.id}}">
+    <input class="btn btn-primary" type="submit" value="Refresh course">
+</form>
